@@ -6,7 +6,18 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 $_SERVER['SCRIPT_NAME']='/'.basename(__FILE__);
 $_SERVER['SCRIPT_FILENAME']=__FILE__;
 
-require_once(dirname(__FILE__).'/../../yii/framework/yii.php');
+$yii_path = dirname(__FILE__).'/../../../yiisoft/yii/framework/yii.php';
+if (file_exists($yii_path)) {
+	require_once($yii_path);
+} else {
+	$yii_path = dirname(__FILE__).'/../vendor/yiisoft/yii/framework/yii.php';
+	if (file_exists($yii_path)) {
+		require_once($yii_path);
+	} else {
+		die("Not found Yii core file.\n");
+	}
+}
+
 require_once(dirname(__FILE__).'/TestApplication.php');
 //require_once('PHPUnit/Framework/TestCase.php');
 
