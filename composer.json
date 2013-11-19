@@ -1,0 +1,25 @@
+{
+    "name": "larryli/yex",
+    "description": "Yii PHP Framework Extension",
+    "keywords": ["yii", "framework", "extension"],
+    "homepage": "https://github.com/larryli/yex",
+    "type": "yii-extension",
+    "minimum-stability": "stable",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Larry Li",
+            "email": "larryli@qq.com",
+            "homepage": "https://larryli.cn/",
+            "role": "Founder"
+        },
+    ],
+    "support": {
+        "issues": "https://github.com/larryli/yex/issues?state=open",
+        "source": "https://github.com/larryli/yex"
+    },
+    "require": {
+        "php": ">=5.1.0",
+        "yiisoft/yii": ">=1.0,<2.0"
+    }
+}
